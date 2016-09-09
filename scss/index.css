@@ -1,0 +1,30 @@
+/*** Variables ***/
+/** Start show **/
+body {
+  font: 14px "Georgia", "Verdana"; }
+
+header {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #696696; }
+  header #welcome {
+    font: bold 20px "Georgia", "Verdana"; }
+  header #about {
+    margin-left: 180px; }
+
+li:hover {
+  cursor: pointer; }
+
+footer {
+  padding-top: 7px;
+  left: -2px;
+  right: -2px;
+  border-top: 1px solid #696696; }
+
+header .space, footer .space {
+  margin-left: 12px; }
+header a, footer a {
+  color: inherit;
+  text-decoration: none; }
+
+/*# sourceMappingURL=index.css.map */

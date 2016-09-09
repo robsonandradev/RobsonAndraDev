@@ -1,0 +1,18 @@
+<b>Node.js</b>
+
+Segundo a <a href="https://pt.wikipedia.org/wiki/Node.js">wikipedia</a> Node.js
+é um interpretador de código JavaScript que funciona do lado do servidor.
+
+<b>Por que usar Node.js?</b>
+O que faz de uma aplicação Node.js completamente difetente das aplicações web tradicionais,
+é o seu modelo de <em>Request</em> e <em>Response</em>. Devido a clara comunicação JavaScript de ambos os lados,
+a API do Node, para o cliente(nesse caso o navegador), permite que o servidor envie dados para o cliente independente
+de requisição do mesmo. Isso se torna possível porque o servidor Node é baseado em eventos, isso quer dizer que,
+numa aplicação Node quando um cliente(remetente) envia uma mensagem para outro(destinatário), o destinatário não precisa
+ficar requisitando a mensagem, que ele não faz a menor ideia de quando foi enviada, para o servidor. Nessa aplicação o servidor
+fará todo trabalho "sujo" sem "cobraças" do destinatário, no momento em que o remetente enviar a mensagem o servidor recebe e redireciona
+para o destinatário, pois diferente dos servidores tradicionais o Node se comunica com facilidade com seus clientes.
+
+<b>Onde o Node.js se mostra mais eficiente</b>
+Em aplicações de real-time, principalmente, onde mais de um cliente trocam informações e ao mesmo tempo esperam pelas informações
+enviadas para eles, como chats, salas de bate papo e etc.
