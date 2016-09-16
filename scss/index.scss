@@ -43,6 +43,41 @@ footer {
     }
 }
 
+#contentArticle{
+    width: 350px;
+    input, textarea {
+        margin: 10px;
+        border: 1px solid #000;
+    }
+    #textArt{
+        width: 750px;
+        height: 600px;
+        resize: none;
+        overflow-y: scroll;
+    }
+    #title{
+        font: bold 20px "Georgia", "Verdana";
+    }
+    #addTag{
+        @extend %italic-font;
+        @extend %margin-left;
+    }
+    input[type=submit]{
+        padding: 5px;
+        background-color: #90EE90;
+        @extend %margin-left;
+    }
+    #listOfTags, #error {
+        @extend %italic-font;
+    }
+}
+%italic-font {
+    font: italic 20px "Georgia", "Verdana";
+}
+%margin-left{
+    float: left;
+}
+
 @mixin comeonTest($arg){
     //samething
 }
