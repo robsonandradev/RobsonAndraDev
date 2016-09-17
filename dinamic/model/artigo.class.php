@@ -1,7 +1,7 @@
 <?php
 class Artigo
 {
-    private idArticle;
+    private idArticle = null;
     private $title;
     private $text;
     private $publicDate;
