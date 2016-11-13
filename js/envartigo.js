@@ -1,41 +1,38 @@
-$(document).ready(function(){
-    var tags = new Array();
-    centerMidle();
-    $(window).resize(function(){
-        centerMidle();
-    });
-    $("#sendArt").submit(function(e){
+$( document ).ready( function() {
+    var tags = new Array(),
+        baseurl = 'http://localhost:8080/RobsonAndraDev/';
+    $('footer').css("margin-top", "60px" );
+    $( "#sendArt" ).submit( function( e ) {
         e.preventDefault();
-        if($("#addTag").val() == ""){
-            $.post("dinamic/controller/envartigo.php", {
-                title: $("#title").val(),
-                textArt: $("#textArt").text(),
+        if( $( "#addTag" ).val() == "" ) {
+            $.post( baseurl + "artigo/novo", {
+                title: $( "#title" ).val(),
+                textArt: $( "#textArt" ).val(),
                 tags: tags
-            }).done(function(e){
-                $("#error").text("").append($("<p>").append(e).css("color", "green"));
-                $("#sendArt").hide();
-            }).fail(function(e){
-                $("#error").text("").append($("<p>").append(e).css("color", "red"));
+            }).done( function( e ) {
+                var color = "red";
+                if( e.trim() == "Artigo salvo com sucesso!" || e.trim() == "Sucesso[no tags]" ) {
+                    color = "green";
+                    $("#sendArt").hide();
+                    $( 'footer' ).css( "margin-top", ($(window).height() - $("footer").height()) + "px" );
+                }
+                $( "#error" ).text( "" ).append( $("<p>" ).append( e ).css( "color", color ));
+            }).fail( function( e ) {
+                $( "#error" ).text( "" ).append( $( "<p>" ).append( e ).css( "color", "red" ));
             });
         }else{
-            var tag = $("#addTag").val();
-            if(tag[0] == "#"){
-                tag = tag.substr(1, tag.length);
+            var tag = $( "#addTag" ).val();
+            if( tag[0] == "#" ) {
+                tag = tag.substr( 1, tag.length );
             }
-            if(tags.indexOf(tag) == -1 ){
-                tags.push(tag);
-                $("#listOfTags").append("#").append(tag)
-                    .append(" ");
-                if(tags.length % 5 == 0){
-                    $("#listOfTags").append($("<br />"));
+            if( tags.indexOf(tag) == -1 ) {
+                tags.push( tag );
+                $( "#listOfTags" ).append( "#" ).append( tag ).append( " " );
+                if( tags.length % 5 == 0 ) {
+                    $( "#listOfTags" ).append( $( "<br />" ) );
                 }
             }
-            $("#addTag").val("");
+            $( "#addTag" ).val( "" );
         }
     });
 });
-function centerMidle(){
-    var xCenter = ($(window).width()/2) - 365;
-    $("#contentArticle").css("margin-left", xCenter + "px")
-                        .css("padding-top", "10px");
-}

@@ -1,24 +1,24 @@
 <?php
     include_once("../factory/artigofactory.class.php");
-    include_once("../model/artigo.class.php")
+    include_once("../model/artigo.class.php");
     if(isset($_POST["title"]))
     {
         $title = $_POST["title"];
         $textArt = $_POST["textArt"];
         $artigoFactory = new ArtigoFactory();
         $artigoFactory->autocommit(false);
-        $result = $artigoFactory->getIdArticleByTitle($title);
-        if($result->num_rows <= 0 )
+        $idArticle = $artigoFactory->getIdArticleByTitle($title);
+        if($idArticle == null )
         {
             $artigo = new Artigo();
-            $artigo->setTitle($textArt);
+            $artigo->setTitle($title);
             $artigo->setText($textArt);
             if($artigoFactory->insertArticle($artigo) === true)
             {
                 if(isset($_POST["tags"]))
                 {
                     $tags = $_POST["tags"];
-                    $err = putTags($conn, $title, $tags, $artigoFactory);
+                    $err = putTags($title, $tags, $artigoFactory);
                     if($err == 0)
                     {
                         $artigoFactory->commit();
@@ -50,31 +50,37 @@
             echo "Titulo já está em uso!";
         }
     }
+    else
+    {
+        echo "Sem titulo.";
+    }
     $artigoFactory->close();
 
-    function putTags($conn, $title, $tags, $artigoFactory)
+    function putTags($title, $tags, $artigoFactory)
     {
         foreach($tags as $tag)
         {
-            $resultTag = $artigoFactory->getTagByName($tag);
-            if($resultTag->num_rows <= 0 )
+            $objTag = $artigoFactory->getTagByName($tag);
+            if($objTag->getIdTag() == NULL)
             {
                 if($artigoFactory->insertTag($tag) == true)
                 {
-                    $result = $artigoFactory->getIdArticleByTitle($title);
-                    $row = $result->fetch_assoc();
-                    $idArticle = $row["idarticle"];
-                    $row = $resultTag->fetch_assoc();
-                    $idTag = $row["idtag"];
-                    if($artigo->insertArticleTag($idArticle, $idTag) != true)
+                    $idArticle = $artigoFactory->getIdArticleByTitle($title);
+                    echo "<br><br>";
+                    $objTag = $artigoFactory->getTagByName($tag);
+                    echo $objTag->getIdTag();
+                    echo $objTag->getNameTag();
+                    echo "<br><br>";
+                    
+                    if($artigoFactory->insertArticleTag($idArticle, $objTag->getIdTag()) != true)
                     {
-                        $conn->rollBack();
+                        $artigoFactory->rollBack();
                         return 2;
                     }
                 }
                 else
                 {
-                    $conn->rollBack();
+                    $artigoFactory->rollBack();
                     return 1;
                 }
             }

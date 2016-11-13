@@ -1,5 +1,6 @@
 <?php
 include_once("../model/conn.class.php");
+include_once("../model/artigo.class.php");
 
 class TagFactory extends Conn
 {
@@ -23,12 +24,23 @@ class TagFactory extends Conn
     {
         $sql = "select idtag from tag where nametag = '$tagName'";
         $result = $this->conn->query($sql);
-        return $result;
+        $row = $result->fetch_assoc();
+        $tag = new Tag();
+        $tag->setIdTag( $row["idtag"] );
+        $tag->setNameTag( $row["nametag"] );
+        
+        print $sql;
+        print_r($row); 
+            
+        return $tag;
     }
     
-    public function insertTag($tagname)
+    public function insertTag($tag)
     {
-        $sql = "insert into tag values(null, '$tagName')";
+        print_r($tag);
+        $nameTag = $tag->getNameTag();
+        $sql = "insert into tag values(null, '$nameTag')";
+        echo "<br>insert tag: $sql<br>";
         return $this->conn->query($sql);
     }
     
@@ -49,10 +61,10 @@ class TagFactory extends Conn
 }
 // test class
 /*
-$artigo = new Artigo();
+$tagFactory = new TagFactory();
 
-$result = $artigo->getIdArticleByTitle("teste");
-for($rows = array(); $row = $result->fetch_assoc(); $rows[$row["idarticle"]] = $row["idarticle"])
+$result = $tagFactory->getIdArticleByTitle("teste");
+/*for($rows = array(); $row = $result->fetch_assoc(); $rows[$row["idarticle"]] = $row["idarticle"])
 {
     print_r($row);
 }

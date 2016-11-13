@@ -1,7 +1,7 @@
 <?php
 class Artigo
 {
-    private idArticle = null;
+    private $idArticle;
     private $title;
     private $text;
     private $publicDate;
@@ -19,7 +19,7 @@ class Artigo
     
     public function getTitle()
     {
-        return $this->title
+        return $this->title;
     }
     
     public function setTitle($title_)
@@ -29,7 +29,7 @@ class Artigo
     
     public function getText()
     {
-        return $this->text
+        return $this->text;
     }
     
     public function setText($text_)
@@ -39,12 +39,12 @@ class Artigo
     
     public function getPublicDate()
     {
-        
+        return $this->publicDate;
     }
     
     public function setPublicDate($publicDate_)
     {
-        $this->publicDate;
+        $this->publicDate = $publicDate_;
     }
     
     public function getTags()
