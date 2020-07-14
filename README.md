@@ -1,12 +1,12 @@
 # Robson Andrade
 
-## Cloud Solutions Specialist
+### Cloud Solutions Specialist
 
 Worked effectively with cross-functional design teams  
 to create software solutions that elevated client side experience  
 and significantly improved overall functionality and performance.
 
-### Some Skills Recently Used
+#### Some Skills Recently Used
 
 - Nodejs
 - Typescript
