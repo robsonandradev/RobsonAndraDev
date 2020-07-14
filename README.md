@@ -1,22 +1,22 @@
 # Robson Andrade
 
-### Cloud Solutions Specialist
+### Cloud Solutions Specialist :cloud:
 
-Worked effectively with cross-functional design teams  
-to create software solutions that elevated client side experience  
-and significantly improved overall functionality and performance.
+> Worked effectively with cross-functional design teams :people_holding_hands::people_holding_hands::people_holding_hands:  
+> to create software solutions that elevated client side experience  
+> and significantly improved overall functionality and performance :rocket::rocket::rocket:.
 
 #### Some Skills Recently Used
 
 - Nodejs
 - Typescript
-- Python
+- Python :snake:
 - Shell scripts
-- Linux
-- Infraestructure as code
+- Linux :computer:
+- Infraestructure as code :page_with_curl: 
 - AWS
-  + EC2
-  + S3
+  + EC2 :desktop_computer: 
+  + S3 :file_folder:
   + CloudFront
   + CloudFormation
   + CDK
@@ -25,6 +25,6 @@ and significantly improved overall functionality and performance.
   + ECS
   + SQS
   + IAM
-- Docker
-- CI/CD
+- Docker :whale:
+- CI/CD :package: 
 
