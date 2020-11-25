@@ -28,3 +28,5 @@
 - Docker :whale:
 - CI/CD :package: 
 
+![RobsonAndradev's github stats](https://github-readme-stats.vercel.app/api?username=robsonandradev&show_icons=true&theme=dark)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=robsonandradev&layout=compact)](https://github.com/robsonandradev/github-readme-stats)
