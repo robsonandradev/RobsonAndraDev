@@ -5,8 +5,8 @@
 ### Site Reliability Engineer [SRE]
 
 > Cloud Engineer with solid expertise in building scalable applications, 
-> primarily by using a microservice architecture that has been giving 
-> support to businesses with a user base greater than 20M.
+> Primarily by using a microservice architecture that has been giving 
+> Support to businesses with a user base greater than 20M.
 
 #### Some Skills Recently Used
 
@@ -16,11 +16,13 @@ Some technologies that I have been working with recently:
 - AWS CloudFront and Cloudflare as a content delivery network
 - RabbitMQ and AWS SQS + SNS as a message broker
 - Redis as a cache database
-- AWS CloudFormation, AWS CDK, Pulumi and Terraform to run infra as code
+- AWS CloudFormation, AWS CDK, Pulumi, and Terraform to run infra as code
 - JavaScript and Python stacks 
 
 ![RobsonAndradev's github stats](https://github-readme-stats.vercel.app/api?username=robsonandradev&show_icons=true&theme=dark)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=robsonandradev&layout=compact)](https://github.com/robsonandradev/github-readme-stats)
+
+[![roadmap.sh](https://api.roadmap.sh/v1-badge/wide/64986587d99c9d6731950218?variant=dark)](https://roadmap.sh)
 
 ### Let's talk
 
