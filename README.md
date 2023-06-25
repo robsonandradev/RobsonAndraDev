@@ -5,8 +5,8 @@
 ### Site Reliability Engineer [SRE]
 
 > Cloud Engineer with solid expertise in building scalable applications, 
-> Primarily by using a microservice architecture that has been giving 
-> Support to businesses with a user base greater than 20M.
+> primarily by using a microservice architecture that has been giving 
+> support to businesses with a user base greater than 20M.
 
 #### Some Skills Recently Used
 
@@ -23,6 +23,8 @@ Some technologies that I have been working with recently:
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=robsonandradev&layout=compact)](https://github.com/robsonandradev/github-readme-stats)
 
 [![roadmap.sh](https://api.roadmap.sh/v1-badge/wide/64986587d99c9d6731950218?variant=dark)](https://roadmap.sh)
+
+[![roadmap.sh](https://api.roadmap.sh/v1-badge/wide/64986587d99c9d6731950218?variant=dark&roadmaps=software-architect)](https://roadmap.sh)
 
 ### Let's talk
 
