@@ -24,8 +24,6 @@ Some technologies that I have been working with recently:
 
 [![roadmap.sh](https://api.roadmap.sh/v1-badge/wide/64986587d99c9d6731950218?variant=dark)](https://roadmap.sh)
 
-[![roadmap.sh](https://api.roadmap.sh/v1-badge/wide/64986587d99c9d6731950218?variant=dark&roadmaps=software-architect)](https://roadmap.sh)
-
 ### Let's talk
 
 [https://www.linkedin.com/in/robsonandradev/](https://www.linkedin.com/in/robsonandradev/)
